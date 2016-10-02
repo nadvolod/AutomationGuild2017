@@ -2,7 +2,6 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 
 namespace AutomationGuild2017
@@ -30,7 +29,7 @@ namespace AutomationGuild2017
                 }
                 wd.FindElement(By.Id("user_email")).Click();
                 wd.FindElement(By.Id("user_email")).Clear();
-                wd.FindElement(By.Id("user_email")).SendKeys("todd.bernstein.1@mailinator.com");
+                wd.FindElement(By.Id("user_email")).SendKeys(Environment.GetEnvironmentVariable("UQA_TEST_USER_NAME",EnvironmentVariableTarget.User));
                 wd.FindElement(By.Id("user_password")).Click();
                 wd.FindElement(By.Id("user_password")).Clear();
                 wd.FindElement(By.Id("user_password")).SendKeys("Test12345!%!");
@@ -60,7 +59,7 @@ namespace AutomationGuild2017
                 }
                 wd.FindElement(By.Id("user_email")).Click();
                 wd.FindElement(By.Id("user_email")).Clear();
-                wd.FindElement(By.Id("user_email")).SendKeys("todd.bernstein.1@mailinator.com");
+                wd.FindElement(By.Id("user_email")).SendKeys(Environment.GetEnvironmentVariable("UQA_TEST_USER_NAME",EnvironmentVariableTarget.User));
                 wd.FindElement(By.Id("user_password")).Click();
                 wd.FindElement(By.Id("user_password")).Clear();
                 wd.FindElement(By.Id("user_password")).SendKeys("Test12345!%!");
@@ -90,7 +89,7 @@ namespace AutomationGuild2017
                 }
                 wd.FindElement(By.Id("user_email")).Click();
                 wd.FindElement(By.Id("user_email")).Clear();
-                wd.FindElement(By.Id("user_email")).SendKeys("todd.bernstein.1@mailinator.com");
+                wd.FindElement(By.Id("user_email")).SendKeys(Environment.GetEnvironmentVariable("UQA_TEST_USER_NAME",EnvironmentVariableTarget.User));
                 wd.FindElement(By.Id("user_password")).Click();
                 wd.FindElement(By.Id("user_password")).Clear();
                 wd.FindElement(By.Id("user_password")).SendKeys("Test12345!%!");

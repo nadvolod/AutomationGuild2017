@@ -25,10 +25,10 @@ namespace AutomationGuild2017
 
                 wd.FindElement(By.Id("user_email")).Click();
                 wd.FindElement(By.Id("user_email")).Clear();
-                wd.FindElement(By.Id("user_email")).SendKeys("todd.bernstein.1@mailinator.com");
+                wd.FindElement(By.Id("user_email")).SendKeys(Environment.GetEnvironmentVariable("UQA_TEST_USER_NAME",EnvironmentVariableTarget.User));
                 wd.FindElement(By.Id("user_password")).Click();
                 wd.FindElement(By.Id("user_password")).Clear();
-                wd.FindElement(By.Id("user_password")).SendKeys("Test12345!%");
+                wd.FindElement(By.Id("user_password")).SendKeys(Environment.GetEnvironmentVariable("UQA_TEST_USER_PASS", EnvironmentVariableTarget.User));
                 wd.FindElement(By.Id("btn-signin")).Click();
                 if (!wd.FindElement(By.TagName("html")).Text.Contains("Your Student Dashboard"))
                 {
@@ -54,10 +54,10 @@ namespace AutomationGuild2017
                 }
                 wd.FindElement(By.Id("user_email")).Click();
                 wd.FindElement(By.Id("user_email")).Clear();
-                wd.FindElement(By.Id("user_email")).SendKeys("todd.bernstein.1@mailinator.com");
+                wd.FindElement(By.Id("user_email")).SendKeys(Environment.GetEnvironmentVariable("UQA_TEST_USER_NAME",EnvironmentVariableTarget.User));
                 wd.FindElement(By.Id("user_password")).Click();
                 wd.FindElement(By.Id("user_password")).Clear();
-                wd.FindElement(By.Id("user_password")).SendKeys("Test12345!%");
+                wd.FindElement(By.Id("user_password")).SendKeys(Environment.GetEnvironmentVariable("UQA_TEST_USER_PASS", EnvironmentVariableTarget.User));
                 wd.FindElement(By.Id("btn-signin")).Click();
 
                 //1. Replaced the statement with an actual assertion
@@ -82,10 +82,10 @@ namespace AutomationGuild2017
                 }
                 wd.FindElement(By.Id("user_email")).Click();
                 wd.FindElement(By.Id("user_email")).Clear();
-                wd.FindElement(By.Id("user_email")).SendKeys("todd.bernstein.1@mailinator.com");
+                wd.FindElement(By.Id("user_email")).SendKeys(Environment.GetEnvironmentVariable("UQA_TEST_USER_NAME",EnvironmentVariableTarget.User));
                 wd.FindElement(By.Id("user_password")).Click();
                 wd.FindElement(By.Id("user_password")).Clear();
-                wd.FindElement(By.Id("user_password")).SendKeys("Test12345!%");
+                wd.FindElement(By.Id("user_password")).SendKeys(Environment.GetEnvironmentVariable("UQA_TEST_USER_PASS", EnvironmentVariableTarget.User));
                 wd.FindElement(By.Id("btn-signin")).Click();
 
                 //1. Replaced the statement with an actual assertion
@@ -110,10 +110,10 @@ namespace AutomationGuild2017
                 }
                 wd.FindElement(By.Id("user_email")).Click();
                 wd.FindElement(By.Id("user_email")).Clear();
-                wd.FindElement(By.Id("user_email")).SendKeys("todd.bernstein.1@mailinator.com");
+                wd.FindElement(By.Id("user_email")).SendKeys(Environment.GetEnvironmentVariable("UQA_TEST_USER_NAME",EnvironmentVariableTarget.User));
                 wd.FindElement(By.Id("user_password")).Click();
                 wd.FindElement(By.Id("user_password")).Clear();
-                wd.FindElement(By.Id("user_password")).SendKeys("Test12345!%");
+                wd.FindElement(By.Id("user_password")).SendKeys(Environment.GetEnvironmentVariable("UQA_TEST_USER_PASS", EnvironmentVariableTarget.User));
                 wd.FindElement(By.Id("btn-signin")).Click();
 
                 //1. Replaced the statement with an actual assertion
