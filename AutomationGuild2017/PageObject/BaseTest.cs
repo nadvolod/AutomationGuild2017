@@ -7,7 +7,7 @@ namespace AutomationGuild2017.PageObject
     [TestFixture]
     public class BaseTest
     {
-        public IWebDriver Driver { get; private set; }
+        protected IWebDriver Driver { get; private set; }
 
         [SetUp]
         public void InitializeDriverForEveryTest()
