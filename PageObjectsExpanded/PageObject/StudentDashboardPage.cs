@@ -9,7 +9,7 @@ namespace PageObjectsExpanded.PageObject
 
         public IWebElement ResumeUserInteractionsCourseButton => Driver.FindElement(
             By.XPath(
-                "//*[@href='/courses/take/selenium-webdriver-user-interactions/downloads/361893-course-resources']"));
+                "//*[contains(@href, 'user-interactions') and contains(@class,'btn-primary')]"));
 
         public StudentDashboardPage(IWebDriver driver) : base(driver)
         {}

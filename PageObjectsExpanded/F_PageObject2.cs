@@ -5,6 +5,7 @@ using PageObjectsExpanded.PageObject;
 namespace PageObjectsExpanded
 {
     [TestFixture]
+    [Description("Enhanced page objects")]
     public class F_PageObject2 : BaseTest
     {
         [Test]
