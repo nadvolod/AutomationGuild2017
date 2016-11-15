@@ -1,12 +1,11 @@
 ﻿using System;
-using AutomationGuild2017.PageObject;
 using NUnit.Framework;
+using PageObjectsExpanded.PageObject;
 
-namespace AutomationGuild2017
+namespace PageObjectsExpanded
 {
     [TestFixture]
-    [Description("The next level of encapsulation involves Page Objects")]
-    public class E_PageObject : BaseTest
+    public class F_PageObject2 : BaseTest
     {
         [Test]
         public void Test1()
