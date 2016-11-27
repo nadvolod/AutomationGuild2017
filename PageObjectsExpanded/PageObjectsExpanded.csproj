@@ -65,8 +65,10 @@
   <ItemGroup>
     <Compile Include="F_PageObject2.cs" />
     <Compile Include="PageObject\BasePage.cs" />
+    <Compile Include="PageObject\BasePageObjectRepository.cs" />
     <Compile Include="PageObject\BaseTest.cs" />
     <Compile Include="PageObject\CoursesPage.cs" />
+    <Compile Include="PageObject\CoursesPageObjectRepository.cs" />
     <Compile Include="PageObject\StudentDashboardPage.cs" />
     <Compile Include="PageObject\StudentLoginPage.cs" />
     <Compile Include="PageObject\UserInteractionsCoursePage.cs" />

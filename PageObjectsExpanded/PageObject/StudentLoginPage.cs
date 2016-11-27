@@ -10,7 +10,7 @@ namespace PageObjectsExpanded.PageObject
         private IWebElement EmailField => Driver.FindElement(By.Id("user_email"));
 
         public StudentLoginPage(IWebDriver driver) : base(driver)
-        {}
+        { }
 
         public StudentDashboardPage Login(string userName, string password)
         {

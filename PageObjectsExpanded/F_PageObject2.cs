@@ -15,7 +15,7 @@ namespace PageObjectsExpanded
             coursesPage.GoTo();
 
             var loginPage = coursesPage.ClickSignInLink();
-            var studentDashboardPage = loginPage.Login(Environment.GetEnvironmentVariable("UQA_TEST_USER_NAME",EnvironmentVariableTarget.User), 
+            var studentDashboardPage = loginPage.Login(Environment.GetEnvironmentVariable("UQA_TEST_USER_NAME", EnvironmentVariableTarget.User),
                 Environment.GetEnvironmentVariable("UQA_TEST_USER_PASS", EnvironmentVariableTarget.User));
 
             Assert.IsTrue(studentDashboardPage.IsAt(), "The user was not able to successfully login.");

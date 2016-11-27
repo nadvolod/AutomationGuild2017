@@ -2,11 +2,10 @@ using OpenQA.Selenium;
 
 namespace PageObjectsExpanded.PageObject
 {
-    public class CoursesPage : BasePage
+    public class CoursesPage : BasePage<CoursesPageObjectRepository>
     {
-        public IWebElement SignInLink => Driver.FindElement(By.ClassName("my-account"));
 
-        public CoursesPage(IWebDriver driver) : base(driver)
+        public CoursesPage(IWebDriver driver) : base(driver, new CoursesPageObjectRepository(driver))
         {}
 
         public void GoTo()
@@ -16,7 +15,7 @@ namespace PageObjectsExpanded.PageObject
 
         public StudentLoginPage ClickSignInLink()
         {
-            SignInLink.Click();
+            ObjectRepository.SignInLink.Click();
             return new StudentLoginPage(Driver);
         }
     }

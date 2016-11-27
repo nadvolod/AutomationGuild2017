@@ -12,7 +12,7 @@ namespace PageObjectsExpanded.PageObject
                 "//*[contains(@href, 'user-interactions') and contains(@class,'btn-primary')]"));
 
         public StudentDashboardPage(IWebDriver driver) : base(driver)
-        {}
+        { }
 
         public bool? IsAt()
         {

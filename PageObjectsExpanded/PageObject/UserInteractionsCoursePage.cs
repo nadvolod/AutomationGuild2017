@@ -10,9 +10,9 @@ namespace PageObjectsExpanded.PageObject
 
 
         public UserInteractionsCoursePage(IWebDriver driver) : base(driver)
-        {}
+        { }
 
-        
+
         public bool? IsAt()
         {
             try
