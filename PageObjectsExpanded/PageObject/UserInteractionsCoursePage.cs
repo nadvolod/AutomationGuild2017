@@ -4,12 +4,10 @@ using OpenQA.Selenium.Support.UI;
 
 namespace PageObjectsExpanded.PageObject
 {
-    public class UserInteractionsCoursePage : BasePage
+    public class UserInteractionsCoursePage : BasePage<UserInteractionsCoursePageObjectRepository>
     {
-        private By ExpandingElementLocator => By.Id("lesson-shelf-toggle");
 
-
-        public UserInteractionsCoursePage(IWebDriver driver) : base(driver)
+        public UserInteractionsCoursePage(IWebDriver driver) : base(driver, new UserInteractionsCoursePageObjectRepository(driver))
         { }
 
 
@@ -17,8 +15,8 @@ namespace PageObjectsExpanded.PageObject
         {
             try
             {
-                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(3));
-                wait.Until(ExpectedConditions.ElementIsVisible(ExpandingElementLocator));
+                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(30));
+                wait.Until(ExpectedConditions.ElementIsVisible(ObjectRepository.ExpandingElementLocator));
             }
             catch (WebDriverTimeoutException)
             {

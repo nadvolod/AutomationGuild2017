@@ -2,37 +2,32 @@ using OpenQA.Selenium;
 
 namespace PageObjectsExpanded.PageObject
 {
-    public class StudentLoginPage : BasePage
+    public class StudentLoginPage : BasePage<StudentLoginPageObjectRepository>
     {
-
-        private IWebElement LoginButton => Driver.FindElement(By.Id("btn-signin"));
-        private IWebElement PasswordField => Driver.FindElement(By.Id("user_password"));
-        private IWebElement EmailField => Driver.FindElement(By.Id("user_email"));
-
-        public StudentLoginPage(IWebDriver driver) : base(driver)
+        public StudentLoginPage(IWebDriver driver) : base(driver, new StudentLoginPageObjectRepository(driver))
         { }
 
         public StudentDashboardPage Login(string userName, string password)
         {
             TypeUserName(userName);
             TypePassword(password);
-            LoginButton.Click();
+            ObjectRepository.LoginButton.Click();
 
             return new StudentDashboardPage(Driver);
         }
 
         private void TypePassword(string password)
         {
-            PasswordField.Click();
-            PasswordField.Clear();
-            PasswordField.SendKeys(password);
+            ObjectRepository.PasswordField.Click();
+            ObjectRepository.PasswordField.Clear();
+            ObjectRepository.PasswordField.SendKeys(password);
         }
 
         private void TypeUserName(string userName)
         {
-            EmailField.Click();
-            EmailField.Clear();
-            EmailField.SendKeys(userName);
+            ObjectRepository.EmailField.Click();
+            ObjectRepository.EmailField.Clear();
+            ObjectRepository.EmailField.SendKeys(userName);
         }
     }
 }

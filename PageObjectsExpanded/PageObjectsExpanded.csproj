@@ -70,8 +70,11 @@
     <Compile Include="PageObject\CoursesPage.cs" />
     <Compile Include="PageObject\CoursesPageObjectRepository.cs" />
     <Compile Include="PageObject\StudentDashboardPage.cs" />
+    <Compile Include="PageObject\StudentDashboardPageObjectRepository.cs" />
     <Compile Include="PageObject\StudentLoginPage.cs" />
+    <Compile Include="PageObject\StudentLoginPageObjectRepository.cs" />
     <Compile Include="PageObject\UserInteractionsCoursePage.cs" />
+    <Compile Include="PageObject\UserInteractionsCoursePageObjectRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

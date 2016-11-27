@@ -2,26 +2,21 @@ using OpenQA.Selenium;
 
 namespace PageObjectsExpanded.PageObject
 {
-    public class StudentDashboardPage : BasePage
+    public class StudentDashboardPage : BasePage<StudentDashboardPageObjectRepository>
     {
 
-        private IWebElement HtmlTag => Driver.FindElement(By.TagName("html"));
 
-        public IWebElement ResumeUserInteractionsCourseButton => Driver.FindElement(
-            By.XPath(
-                "//*[contains(@href, 'user-interactions') and contains(@class,'btn-primary')]"));
-
-        public StudentDashboardPage(IWebDriver driver) : base(driver)
+        public StudentDashboardPage(IWebDriver driver) : base(driver, new StudentDashboardPageObjectRepository(driver))
         { }
 
         public bool? IsAt()
         {
-            return HtmlTag.Text.Contains("Your Student Dashboard");
+            return ObjectRepository.HtmlTag.Text.Contains("Your Student Dashboard");
         }
 
         public UserInteractionsCoursePage ResumeUserInteractionsCourse()
         {
-            ResumeUserInteractionsCourseButton.Click();
+            ObjectRepository.ResumeUserInteractionsCourseButton.Click();
             return new UserInteractionsCoursePage(Driver);
         }
     }
