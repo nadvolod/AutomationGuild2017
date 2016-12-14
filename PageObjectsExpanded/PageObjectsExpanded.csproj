@@ -63,6 +63,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ComplicatedPage.cs" />
+    <Compile Include="ComplicatedPageObjectRepository.cs" />
     <Compile Include="F_PageObject2.cs" />
     <Compile Include="PageObject\BasePage.cs" />
     <Compile Include="PageObject\BasePageObjectRepository.cs" />

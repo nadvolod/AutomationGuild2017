@@ -36,7 +36,17 @@ namespace PageObjectsExpanded
             var userInteractionsCoursePage = studentDashboardPage.ResumeUserInteractionsCourse();
             Assert.IsTrue(userInteractionsCoursePage.IsAt(), "The course did not open succesfully.");
         }
+
+        [Test]
+        public void Test3()
+        {
+            var complicatedPage = new ComplicatedPage(Driver);
+            complicatedPage.GoTo();
+            Assert.IsTrue(complicatedPage.IsAt(), 
+                "The complicated page did not open successfully");
+
+            complicatedPage.ClickFirstTwitterButton();
+            Assert.That(complicatedPage.IsAt(), Is.False);
+        }
     }
-
-
 }
