@@ -48,5 +48,27 @@ namespace PageObjectsExpanded
             complicatedPage.ClickFirstTwitterButton();
             Assert.That(complicatedPage.IsAt(), Is.False);
         }
+        [Test]
+        public void Test4()
+        {
+            var complicatedPage = new ComplicatedPage(Driver);
+            complicatedPage.GoTo();
+            Assert.IsTrue(complicatedPage.IsAt(),
+                "The complicated page did not open successfully");
+
+            complicatedPage.Search("selenium");
+            Assert.That(complicatedPage.IsAt(), Is.False);
+        }
+        [Test]
+        public void Test5()
+        {
+            var complicatedPage = new ComplicatedPage(Driver);
+            complicatedPage.GoTo();
+            Assert.IsTrue(complicatedPage.IsAt(),
+                "The complicated page did not open successfully");
+
+            complicatedPage.OpenToggle();
+            Assert.That(complicatedPage.IsToggleOpen(), Is.True);
+        }
     }
 }
